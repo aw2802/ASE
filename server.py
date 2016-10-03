@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import pymssql
 app = Flask(__name__)
 
@@ -34,11 +34,39 @@ def main():
   dataTable = []
   for i in data:
     dataTable.append(i[0]+ " , "+ str(i[1]))
-  conn.commit()
-  conn.close()
+ 
   
   return render_template('index.html', data= dataTable)
-    # , data = row[2])
+
+@app.route('/add', method=['GET', 'POST'])
+def add():
+  addedNum = request.form['number']
+  addedName = request.form['name']
+  cursor = conn.cursor()
+  cursor.execute("SELECT count(1) FROM Contacts WHERE number = %d", addedNum)
+  # data = cursor.fetchall()
+  if cursor == 0: # no matched ph num (not sure)
+    cursor.execute("INSERT INTO Contacts VALUES (%s, %d)", (addedName, addedNum)) 
+
+
+
+
+
+
+  return render_template('index.html')
+  conn.commit()
+  conn.close()
+
+
+
+
+
+
+
+
+# @app.route('/delete', method=['GET'])
+  # return render_template('index.html')
+
 
 if __name__ == "__main__":
   app.debug = True
