@@ -1,0 +1,98 @@
+ur anaylsis results:
+*******************************
+No config file found, using default configuration
+************* Module temp
+C0304: 69,0: : Final newline missing
+F0401: 4,0: : Unable to import 'flask'
+F0401: 5,0: : Unable to import 'pymssql'
+C0103: 6,0: : Invalid constant name "app"
+C0103: 8,0: : Invalid constant name "conn"
+C0111: 14,0: main: Missing function docstring
+C0103: 19,4: main: Invalid variable name "dataTable"
+C0111: 25,0: add: Missing function docstring
+C0103: 26,4: add: Invalid variable name "addedNum"
+C0103: 27,4: add: Invalid variable name "addedName"
+C0103: 33,8: add: Invalid variable name "d"
+C0103: 44,4: add: Invalid variable name "dataTable"
+C0111: 52,0: delete: Missing function docstring
+C0103: 53,4: delete: Invalid variable name "addedNum"
+C0103: 60,4: delete: Invalid variable name "dataTable"
+
+
+Report
+======
+48 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module |1 |1 |= |100.00 |0.00 |
++---------+-------+-----------+-----------+------------+---------+
+|class |0 |0 |= |0 |0 |
++---------+-------+-----------+-----------+------------+---------+
+|method |0 |0 |= |0 |0 |
++---------+-------+-----------+-----------+------------+---------+
+|function |3 |3 |= |0.00 |0.00 |
++---
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type |number |% |previous |difference |
++==========+=======+======+=========+===========+
+|code |55 |91.67 |56 |-1.00 |
++----------+-------+------+---------+-----------+
+|docstring |1 |1.67 |1 |= |
++----------+-------+------+---------+-----------+
+|comment |1 |1.67 |1 |= |
++----------+-------+------+---------+-----------+
+|empty |3 |5.00 |3 |= |
++----------+-------+------+---------+-----------+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+| |now |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines |0 |0 |= |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000 |= |
++-------------------------+------+---------+-----------+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type |number |previous |difference |
++===========+=======+=========+===========+
+|convention |13 |13 |= |
++-----------+-------+---------+-----------+
+|refactor |0 |0 |= |
++-----------+-------+---------+-----------+
+|warning |0 |1 |-1.00 |
++-----------+-------+---------+-----------+
+|error |0 |0 |= |
++-----------+-------+---------+-----------+
+Messages
+--------
+
++----------------------+------------+
+|message id |occurrences |
++======================+============+
+|invalid-name |9 |
++----------------------+------------+
+|missing-docstring |3 |
++----------------------+------------+
+|import-error |2 |
++----------------------+------------+
+|missing-final-newline |1 |
++----------------------+------------+
+Global evaluation
+-----------------
+Your code has been rated at 7.29/10 (previous run: 7.14/10, +0.15)
+***********************
+
+
