@@ -12,7 +12,6 @@ conn = pymssql.connect(server='eats.database.windows.net',\
 
 @app.route("/")
 def main():
-    print "connected!"
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM Contacts")
     data = cursor.fetchall()
